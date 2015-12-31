@@ -13,7 +13,7 @@
 + (CGRect)maximumSquareFrameThatFits:(CGRect)frame;
 {
     CGFloat a = MIN(frame.size.width, frame.size.height);
-    return CGRectMake(frame.size.width/2 - a/2, frame.size.height/2 - a/2, a, a);
+    return CGRectMake(frame.origin.x + frame.size.width/2 - a/2, frame.origin.y + frame.size.height/2 - a/2, a, a);
 }
 
 + (UIBezierPath *)heartShape:(CGRect)originalFrame
